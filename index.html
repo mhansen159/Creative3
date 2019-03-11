@@ -12,10 +12,10 @@
 <body>
   <h1>Star Wars Data</h1>
   <div id="app">
-  	<div>
-		<p>
+  	<div class="content">
 		<h3>Box 1: people or planets. Box 2: number (1-87 people, 1-59 planets).</h3>
-		<h4>Enter '/' after your number, if your number is invalid you will be defaulted to people 1.</h4>
+		<h4>If your number is invalid you will be defaulted to people 1.</h4>
+		<h5>Single digit numbers will load faster if you put a '/' after.</h5>
 		<form v-on:submit.prevent="newLookUp">
 		<input v-model="toLookUp">
 		<form v-on:submit.prevent="newNumber">

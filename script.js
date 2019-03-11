@@ -1,4 +1,3 @@
-//Vue.component('star-rating', VueStarRating.default);
 let app = new Vue({
   el: '#app',
   data: {
@@ -33,34 +32,10 @@ let app = new Vue({
    },
    newNumber() {
     }
-   },
+},
 	  
-/*   addComment() {
-	   if (!(this.number in this.comments))
-        Vue.set(app.comments, this.number, new Array);		  
-		  this.comments[this.number].push({
-        author: this.addedName,
-        text: this.addedComment,
-			  dateTime: moment().format('MMMM Do YYYY, h:mm:ss a')
-      });
-      this.addedName = '';
-      this.addedComment = '';
-	   },
-
-    setRating(rating){
-		if (!(this.number in this.ratings))
-        Vue.set(this.ratings, this.number, {
-          sum: 0,
-          total: 0,
-		average: 0
-        });
-	this.ratings[this.number].sum += rating;
-	this.ratings[this.number].total += 1;
-  },
-  },*/
 computed: {
-	isPerson() {		    
-		
+	isPerson() {		    		
    		if (this.toLookUp === "people")
 	   		return true;
 		else return false;
