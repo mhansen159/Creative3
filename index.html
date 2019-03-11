@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="shortcut icon" href="#">
+  <link rel="stylesheet" href="/styles.css" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+
+  <title>Star Wars Data</title>
+</head>
+
+<body>
+  <h1>Star Wars Data</h1>
+  <div id="app">
+  	<div>
+		<p>
+		<h3>Box 1: people or planets. Box 2: number (1-87 people, 1-59 planets).</h3>
+		<h4>Enter '/' after your number, if your number is invalid you will be defaulted to people 1.</h4>
+		<form v-on:submit.prevent="newLookUp">
+		<input v-model="toLookUp">
+		<form v-on:submit.prevent="newNumber">
+		<input v-model="number">
+		</p>
+		<h2>{{current.name}}</h2>
+		<template v-if="toLookUp === 'people'">
+		<p>Height: {{current.height}}</p>
+		<p>Mass: {{current.mass}}</p>
+		<p>Gender: {{current.gender}}</p>
+		<p>Hair Color: {{current.hair_color}}</p>
+		<p>Skin Color: {{current.skin_color}}</p>
+		<p>Eye Color: {{current.eye_color}}</p>
+		</template>
+		<template v-else>
+		<p>Diameter: {{current.diameter}}</p>
+		<p>Climate: {{current.climate}}</p>
+		<p>Terrain: {{current.terrain}}</p>
+		<p>Population: {{current.population}}</p>
+		</template>
+		
+  	<p><i>Created: {{current.created}}</i></p>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.2/dist/vue.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="/moment.js"></script>
+  <script src="/script.js"></script>
+</body>
+
+<footer>
+<p>Github: <a href="https://github.com/mhansen159/Creative3">mhansen159-Creative3</a>.</p>
+</footer>
+
+</html>
