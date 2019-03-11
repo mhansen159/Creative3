@@ -1,7 +1,7 @@
 body {
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
-    padding: 20px 100px 0px 400px;
+    padding: 0px 25px 0px 400px;
     background: #a27444;
 }
 
@@ -15,4 +15,8 @@ textarea {
 	border-style: double;
 	border-color: black;
 	max-width: 500px;
+}
+
+#footer {
+	position: fixed,
 }
